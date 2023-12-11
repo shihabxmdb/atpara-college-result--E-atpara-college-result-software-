@@ -6,7 +6,7 @@ export async function POST(req) {
   console.log("body in addStudent api => ", body);
   await dbConnect();
   try {
-    const { name, roll, classname, session, subject } = body;
+    const { name, roll, session, classname, subject } = body;
     await new Student({
       name,
       roll,

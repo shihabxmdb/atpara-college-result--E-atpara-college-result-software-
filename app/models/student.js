@@ -18,6 +18,12 @@ const studentSchema = new mongoose.Schema(
       minLength: 3,
       maxLength: 40,
     },
+    session: {
+      type: String,
+      required: [true, "Please enter Session"],
+      minLength: 1,
+      maxLength: 10,
+    },
     classname: {
       type: String,
       required: [true, "Please enter Student Name"],
@@ -27,15 +33,9 @@ const studentSchema = new mongoose.Schema(
       maxLength: 40,
     },
 
-    session: {
-      type: String,
-      required: [true, "Please enter Session"],
-      minLength: 1,
-      maxLength: 10,
-    },
     subject: {
       type: Array,
-      required: [true, "Please enter all Subjects"],
+      //required: [true, "Please enter all Subjects"],
       minLength: 1,
       maxLength: 7,
     },

@@ -18,7 +18,7 @@ function AddSubject() {
       e.preventDefault();
       setLoading(true);
       console.log("before response");
-      const response = await fetch(`${process.env.API}/addsubject`, {
+      const response = await fetch(`${process.env.API}/addSubject`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

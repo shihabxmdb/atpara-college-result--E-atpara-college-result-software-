@@ -6,6 +6,7 @@ import TopNav from "./components/nav/TopNav";
 import Footer from "./components/footer/Footer";
 import { Toaster } from "react-hot-toast";
 import { SessionYearProvider } from "@/context/session";
+import {ClassProvider} from "@/context/class";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +17,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <SessionProvider>
       <SessionYearProvider>
-      <body className={inter.className}>
+        <ClassProvider>
+        <body className={inter.className}>
           <TopNav />
           <Toaster />
 
           {children}
           <Footer />
         </body>
+        </ClassProvider>
+      
       </SessionYearProvider>
         
       </SessionProvider>

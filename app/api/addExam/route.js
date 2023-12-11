@@ -3,7 +3,7 @@ import dbConnect from "@/app/utils/dbConnect";
 import Exam from "@/app/models/exam";
 export async function POST(req) {
   const body = await req.json();
-  console.log("body in addsubject api => ", body);
+  console.log("body in addExam api => ", body);
   await dbConnect();
   try {
     const { examname } = body;
